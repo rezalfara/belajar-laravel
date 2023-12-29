@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
+    <h1 class="mb-5">{{ $title }}</h1>
 <article>
     <h1>{{ $post->title }}</h1>
 
