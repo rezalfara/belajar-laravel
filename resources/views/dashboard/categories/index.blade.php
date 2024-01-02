@@ -6,12 +6,12 @@
     </div>
 
     @if (session()->has('success'))
-        <div class="alert alert-success col-lg-6" role="alert">
+        <div class="alert alert-success col-lg-5" role="alert">
             {{ session('success') }}
         </div>
     @endif
 
-    <div class="table-responsive col-lg-6">
+    <div class="table-responsive col-lg-5">
         <a href="/dashboard/categories/create" class="btn btn-primary mb-3">Create new category</a>
         <table class="table table-striped table-sm">
             <thead>
@@ -27,8 +27,6 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $category->name }}</td>
                         <td>
-                            <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-info"><span
-                                    data-feather="eye"></span></a>
                             <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
 
                             <form action="/dashboard/categories/{{ $category->slug }}" method="POST" class="d-inline">
